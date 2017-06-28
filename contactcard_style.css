@@ -1,0 +1,54 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+wrapper{
+  width: 950px;
+  font-family: "Calibri", sans-serif;    
+}
+header{
+  height: 50px;
+  width: 950px;    
+  padding: 0px 10px;    
+  display:inline-block;
+  text-align: center; 
+  background-color: darkseagreen; 
+  border-style: solid;
+  border-color: cadetblue;
+  border-width: 3px;    
+}
+main{
+  width: 850px;    
+  display: inline-block;     
+  vertical-align: middle; 
+  padding: 10px; 
+}
+main div {
+    width: 350px;
+    display: inline-block;
+    align-content: right;
+    text-align: right;
+    margin-right: 40px;
+}
+#description{
+    width: 200px;
+    height: 200px;
+}
+
+input {
+    width: 200px;
+    margin-bottom: 10px;
+}
+#showInfo {
+    width: 400px;
+    vertical-align: top;
+    
+}
+.results{
+    height: 75px;
+    border-style: solid;
+    margin-bottom: 20px;  
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+}

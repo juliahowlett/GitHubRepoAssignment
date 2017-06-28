@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Card</title>
+    <link rel="stylesheet" href="contactcard_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function() {
+            console.log('contacts jquery is working');
+
+            $("#info").on('click', function(event) {    
+            event.preventDefault();
+            var firstName = $("#firstName").val();
+            var lastName = $("#lastName").val();
+            var description = $("#description").val();
+            console.log(firstName, lastName, description);
+                $('#showInfo').append(
+                    "<div class='results' " + 
+                    //"id=" + firstName + lastName +
+                    "desc_attr=" + description +
+                    ">" +
+                    '<h1>' + firstName + '&nbsp;' + lastName + 
+                    '</h1>' 
+                    + '</div>');
+            });
+            
+            $('.results').on('click', function(event) {    
+                event.preventDefault();
+                var desc =  $(this).attr('desc_attr');
+                console.log( desc);
+                $(this).append(
+                    '<p>' + desc + '</p>');
+            });
+        });
+    </script>
+</head>
+<body>  
+  <wrapper>   
+   <header> 
+     <div>
+        <h2>CodingDojo Contact Page</h2>
+    </div>   
+   </header>
+   <main>
+        <div>
+            <form>
+                <p>First Name:&nbsp;&nbsp;&nbsp;<input id="firstName" type="text" placeholder="First Name"></p>
+                <p>Last Name:&nbsp;&nbsp;&nbsp;<input id="lastName" type="text" placeholder="Last Name"></p>
+                <p>Description:&nbsp;&nbsp;&nbsp;<textarea id="description" type="textarea" placeholder="Enter Description"></textarea></p>
+                <button id="info">Add User</button>
+            </form>
+        </div>
+       <div id="showInfo">
+       </div>
+    </main>
+  </wrapper>   
+</body>
+</html>
